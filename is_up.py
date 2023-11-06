@@ -7,9 +7,9 @@ def is_up(host):
 
 if __name__ == "__main__":
     if len(argv) != 2:
-        print("Usage: python is_up.py 8.8.8.8")
+        print("Usage: python3 is_up.py <host>")
         exit(1)
     if is_up(argv[1]):
-        print("up !")
+        print("UP !")
     else:
-        print("down !")
+        print("DOWN !")
