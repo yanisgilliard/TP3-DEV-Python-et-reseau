@@ -1,14 +1,15 @@
 from os import system
 from sys import argv
 
+
 def is_up(host):
-    return system("ping -c 1 " + host + "/dev/null") == 0 
+    return system("ping -c 1 " + host + " > /dev/null") == 0
 
 if __name__ == "__main__":
-    if len(argv) !=2:
-        print ("usage : python3 is_up.py <host>")
+    if len(argv) != 2:
+        print("Usage: python is_up.py 8.8.8.8")
         exit(1)
     if is_up(argv[1]):
         print("up !")
-    else: 
+    else:
         print("down !")
